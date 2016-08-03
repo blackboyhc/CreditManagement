@@ -36,6 +36,6 @@ module.exports = function (webpackConfig) {
     return memo;
   }, {});
   webpackConfig.entry = Object.assign({}, webpackConfig.entry, newEntries);
-
+  webpackConfig.externals = {jquery:'jQuery'};
   return webpackConfig;
 };
